@@ -1,0 +1,23 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-teste
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-teste
+  template:
+    metadata:
+      labels:
+        app: app-teste
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.26.2
+          ports:
+            - name: nginx
+              containerPort: 80
+            - name: app
+              containerPort: 5000
