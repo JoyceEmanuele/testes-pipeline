@@ -1,0 +1,13 @@
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service
+spec:
+  selector:
+    app: teste-app
+  ports:
+    - protocol: TCP
+      port: 500
+      targetPort: 500
+  type: LoadBalancer
