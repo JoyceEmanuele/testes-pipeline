@@ -14,8 +14,8 @@ spec:
         app: app-teste
     spec:
       containers:
-        - name: nginx
-          image: nginx:1.26.2
+        - name: app-teste
+          image: gcr.io/dev-default-382019/app-teste:v1
           ports:
             - name: nginx
               containerPort: 80
