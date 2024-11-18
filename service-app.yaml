@@ -5,7 +5,7 @@ metadata:
   name: app-service
 spec:
   selector:
-    app: teste-app
+    app: app-teste
   ports:
     - protocol: TCP
       port: 5000
